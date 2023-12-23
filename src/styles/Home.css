@@ -1,0 +1,124 @@
+.home {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-title {
+  padding: 10px;
+  height: 40px;
+  width: 100vw;
+  color: #0d0c22;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-filter {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-box {
+  width: 82vw;
+  height: 37px;
+  border-radius: 7px;
+  padding-left: 10px;
+  border: 2px solid rgb(214, 214, 214);
+  background-color: white;
+  /* primary:#EA4C7C */
+  /* secondary:#F6F4EE */
+  /* third:#0D0C22 */
+  /* text:#0D0C22; */
+}
+.filterIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eab54c;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+.introcard {
+  width: 100vw;
+  height: 100px;
+  margin-top: 10px;
+  background-color: #0d0c22;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+}
+.catagory {
+  margin-top: 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.catagory-button {
+  height: 40px;
+  width: 60px;
+  border-radius: 4px;
+  color: #eab54c;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0.3px 0.3px 3px rgb(223, 223, 223);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.catagory-icons {
+  height: 40px;
+  width: 100px;
+  border-radius: 4px;
+  color: #eab54c;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0.3px 0.3px 3px rgb(223, 223, 223);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.products{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.product-card{
+    width: 189px;
+    height: 250px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid rgb(237, 237, 237);
+    box-shadow: 0.3px 0.3px 3px rgb(223, 223, 223);
+
+}
+
+.details{
+    font-size: medium;
+    color: #0D0C22;
+    line-height:0.4;
+    padding: 7px;
+}
+.addtocart{
+  position: relative;
+  top:-50px;
+  left: 140px;
+  border: none;
+  background-color: #eab54c;
+  color: white;
+  font-size:larger;
+  box-shadow: 1px 1px 2px rgb(240, 240, 240);
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+
+}
