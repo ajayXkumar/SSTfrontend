@@ -12,15 +12,15 @@ const Home = () => {
   };
 
   const handlewall=()=>{
-    const wall=tilesdata.filter((item)=>item.catagory=="wall")
+    const wall=tilesdata.filter((item)=>item.catagory==="wall")
     setcat(wall)
   }
   const handleWash=()=>{
-    const wash=tilesdata.filter((item)=>item.catagory=="washbesin")
+    const wash=tilesdata.filter((item)=>item.catagory==="washbesin")
     setcat(wash);
   }
   const handlefloor= () => {
-     const floor = tilesdata.filter((item) => item.catagory === "floor");
+     const floor = tilesdata.filter((item) => item.catagory ==="floor");
      setcat(floor)
   };
   

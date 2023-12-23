@@ -45,7 +45,26 @@ const tilesdata=[
         catagory:"kitchen",
         quantity:20,
         image:"./5.jpeg"
+    },
+    {
+        id:6,
+        name:"Go green",
+        discription:"lorem ispusm faf aar das",
+        price:2000,
+        catagory:"washbesin",
+        quantity:20,
+        image:"./wash1.jpeg"
+    },
+    {
+        id:7,
+        name:"Go orange",
+        discription:"lorem ispusm faf aar das",
+        price:2100,
+        catagory:"washbesin",
+        quantity:20,
+        image:"./wash.jpeg"
     }
+
 
     
 
