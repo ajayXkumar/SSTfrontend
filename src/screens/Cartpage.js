@@ -9,7 +9,7 @@ const CartPage = ({ cartItems, onRemove }) => {
       message += `${item.name} (Quantity: ${item.quantity})\n`;
     });
 
-    const phoneNumber = '8290616289'; // Replace with the owner's phone number
+    const phoneNumber = '7232849475'; // Replace with the owner's phone number
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   };
