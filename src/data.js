@@ -1,5 +1,3 @@
-
-
 const tilesdata=[
     {
         id:1,

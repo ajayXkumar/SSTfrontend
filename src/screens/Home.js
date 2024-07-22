@@ -5,11 +5,17 @@ import "../styles/Home.css";
 import { useState } from "react";
 import tilesdata from "../data";
 import { Link } from "react-router-dom";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const [cat, setcat] = useState(tilesdata);
-
+  const navigate = useNavigate();
   const handleall = () => {
     setcat(tilesdata);
+  };
+
+  const handleClick = () => {
+    navigate('/cart');
   };
 
   const handlewall = () => {
@@ -38,9 +44,9 @@ const Home = () => {
             // onChange={}
           />
         </div>
-        <div className="filterIcon">
-          <TuneIcon />
-        </div>
+        <div onClick={handleClick}>
+         <ShoppingBagIcon />
+         </div>
       </div>
       <div
         className="introcard"
@@ -104,6 +110,7 @@ const Home = () => {
                   }}
                   alt={product.name}
                 />
+              
                 <div className="details">
                   <p>{product.name}</p>
                   <p style={{ fontWeight: "bold" }}>
@@ -111,7 +118,6 @@ const Home = () => {
                     {product.price}/-
                   </p>
                 </div>
-                <button className="addtocart">+</button>
               </div>
             </Link>
           </React.Fragment>

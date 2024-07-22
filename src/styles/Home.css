@@ -88,6 +88,25 @@
   border-radius: 4px;
 }
 
+catagory-icons::after{
+  
+    height: 40px;
+    width: auto;
+    padding-left:8px;
+    padding-right: 8px;
+    border-radius: 4px;
+    color: #eab54c;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0.3px 0.3px 3px rgb(223, 223, 223);
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+  }
+
+
 .products{
     width: 100vw;
     display: flex;
@@ -110,18 +129,4 @@
     color: #0D0C22;
     line-height:0.4;
     padding: 7px;
-}
-.addtocart{
-  position: relative;
-  top:-50px;
-  left: 140px;
-  border: none;
-  background-color: #eab54c;
-  color: white;
-  font-size:larger;
-  box-shadow: 1px 1px 2px rgb(240, 240, 240);
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-
 }
