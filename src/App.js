@@ -4,6 +4,7 @@ import Home from '../src/screens/Home';
 import ProductDetails from './screens/ProductDetails';
 import CartPage from './screens/Cartpage';
 import { useState } from 'react';
+import AdminPage from './screens/Admin';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -28,6 +29,7 @@ function App() {
           path="/cart"
           element={<CartPage cartItems={cartItems} onRemove={handleRemoveFromCart} />}
         />
+         <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
   );
