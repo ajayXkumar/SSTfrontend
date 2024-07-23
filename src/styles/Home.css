@@ -1,13 +1,11 @@
-.home {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 .page-title {
   padding: 10px;
   height: 40px;
   width: 100vw;
+  margin-bottom: 5px;
   color: #0d0c22;
+  background-color: #eab54c;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -47,10 +45,10 @@
   height: 100px;
   margin-top: 10px;
   background-color: #0d0c22;
+  background-image: url("./../../public//shyam.jpg");
+  background-size: cover;
   border-radius: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 .catagory {
   margin-top: 10px;

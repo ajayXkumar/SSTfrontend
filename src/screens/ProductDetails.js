@@ -4,7 +4,7 @@ import tilesdata from '../data';
 import "../styles/productdetails.css";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const ProductDetails = ({ onAddToCart }) => {
   const { productId } = useParams();
   const navigate = useNavigate();
@@ -19,10 +19,16 @@ const ProductDetails = ({ onAddToCart }) => {
 
   return (
     <div className='product-page'>
-        <div onClick={handleClick}>
+        <div className='top-bar'>
+          
+        <p >
+       <Link style={{textDecoration : "none" ,color:"black",fontWeight:"bold"}} to="/">Home</Link>
+      </p>
+        <div  onClick={handleClick}>
          <ShoppingBagIcon />
          </div>
-
+         </div>
+       
       <div className='alldetails'>
         <img 
           src={process.env.PUBLIC_URL + '/' + product.image}
@@ -30,10 +36,12 @@ const ProductDetails = ({ onAddToCart }) => {
           style={{ width: '200px', height: '200px', borderRadius: '7px' }}
         /> 
         <div className='details'>
-          <h2>{product.name} Details</h2>
+          <h2>{product.name}</h2>
           <p>Price: Rs. {product.price}/-</p>
+          <p>Size : {product.size} </p>
+          <p>Box: {product.box}</p>
           <p>Description: {product.description}</p>
-          <p>Category: {product.category}</p>
+          <p>Category: {product.catagory}</p>
         </div>
         <button className="addtocart" onClick={() => onAddToCart(product)}>Add to Cart</button>
       </div>

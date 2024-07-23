@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="page-title">Home</div>
+      <div className="page-title">Shree shyam tiles , nohar</div>
       <div className="search-filter">
         <div>
           <input
@@ -52,8 +52,6 @@ const Home = () => {
         className="introcard"
         style={{ color: "white", fontSize: "30px", fontWeight: "bold" }}
       >
-        <p style={{ margin: "10px" }}>hello this is the </p>
-        <p>store</p>
       </div>
       <div className="catagory">
         <button className="catagory-button" onClick={handleall}>

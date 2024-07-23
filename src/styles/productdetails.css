@@ -1,6 +1,5 @@
 .alldetails{
      width: 100vw;
-     padding: 20px;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -26,3 +25,12 @@
      border-radius: 5px;
 }
 
+.top-bar{
+    
+     display: flex;
+     background-color: #eab54c;
+     padding: 8px;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+}
