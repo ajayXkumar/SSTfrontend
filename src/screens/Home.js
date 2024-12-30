@@ -1,39 +1,62 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TuneIcon from "@mui/icons-material/Tune";
 import WindowIcon from "@mui/icons-material/Window";
 import "../styles/Home.css";
 import { useState } from "react";
 import tilesdata from "../data";
 import { Link } from "react-router-dom";
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import { useNavigate } from 'react-router-dom';
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { useNavigate } from "react-router-dom";
+
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase.config";
+
 const Home = () => {
-  const [cat, setcat] = useState(tilesdata);
+  const [cat, setcat] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const productsCollection = collection(db, "products");
+        const snapshot = await getDocs(productsCollection);
+        const productList = snapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setcat(productList);
+      } catch (error) {
+        console.error("Error fetching products: ", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   const navigate = useNavigate();
   const handleall = () => {
-    setcat(tilesdata);
+    setcat(cat);
   };
 
   const handleClick = () => {
-    navigate('/cart');
+    navigate("/cart");
   };
 
-  const handlewall = () => {
-    const wall = tilesdata.filter((item) => item.catagory === "wall");
-    setcat(wall);
+  const handleladoo = () => {
+    const ladoo = tilesdata.filter((item) => item.catagory === "ladoo");
+    setcat(ladoo);
   };
-  const handleWash = () => {
-    const wash = tilesdata.filter((item) => item.catagory === "washbasin");
-    setcat(wash);
+  const handlebed = () => {
+    const bed = tilesdata.filter((item) => item.catagory === "bed");
+    setcat(bed);
   };
-  const handlefloor = () => {
-    const floor = tilesdata.filter((item) => item.catagory === "floor");
-    setcat(floor);
+  const handlephone = () => {
+    const phone = tilesdata.filter((item) => item.catagory === "phone");
+    setcat(phone);
   };
 
   return (
-    <div className="home">
-      <div className="page-title">Shree shyam tiles , nohar</div>
+    <div className="home" style={{ padding: "20px", width: "100vw",height:"100vh" }}>
+      <div className="page-title"></div>
       <div className="search-filter">
         <div>
           <input
@@ -45,42 +68,41 @@ const Home = () => {
           />
         </div>
         <div onClick={handleClick}>
-         <ShoppingBagIcon />
-         </div>
+          <ShoppingBagIcon />
+        </div>
       </div>
       <div
         className="introcard"
         style={{ color: "white", fontSize: "30px", fontWeight: "bold" }}
-      >
-      </div>
+      ></div>
       <div className="catagory">
         <button className="catagory-button" onClick={handleall}>
           <WindowIcon /> All
         </button>
-        <div className="catagory-icons" onClick={handlefloor}>
+        <div className="catagory-icons" onClick={handleladoo}>
           <img
             src="./1.jpeg"
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             alt="Description"
           />
-          floor
+          ladoo gopal
         </div>
-        <div className="catagory-icons" onClick={handleWash}>
+        <div className="catagory-icons" onClick={handlebed}>
           <img
             src="./wash.jpeg"
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             alt="Description"
           />
-          washbasin
+          bed
         </div>
 
-        <div className="catagory-icons" onClick={handlewall}>
+        <div className="catagory-icons" onClick={handlephone}>
           <img
             src="./5.jpeg"
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             alt="Description"
           />
-          wall
+          phone stand
         </div>
       </div>
 
@@ -91,7 +113,7 @@ const Home = () => {
         {cat.map((product) => (
           <React.Fragment key={product.id}>
             <Link
-              style={{textDecoration: 'none'}}
+              style={{ textDecoration: "none" }}
               to={`/product/${product.id}`}
               key={product.id}
               className="product-link"
@@ -100,7 +122,7 @@ const Home = () => {
                 <img
                   src={product.image}
                   style={{
-                    width: "150px",
+                    width: "140px",
                     height: "150px",
                     marginLeft: "20px",
                     marginTop: "20px",
@@ -108,7 +130,7 @@ const Home = () => {
                   }}
                   alt={product.name}
                 />
-              
+
                 <div className="details">
                   <p>{product.name}</p>
                   <p style={{ fontWeight: "bold" }}>

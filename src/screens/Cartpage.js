@@ -59,7 +59,7 @@ const CartPage = ({ cartItems, onRemove }) => {
           />
         </label>
       </div>
-      <button onClick={handleSendToWhatsApp}>Send to WhatsApp</button>
+      <button style={{backgroundColor:"green"}}onClick={handleSendToWhatsApp}>Send to WhatsApp</button>
       </div>
     </div>
   );
