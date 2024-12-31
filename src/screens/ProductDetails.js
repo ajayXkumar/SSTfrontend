@@ -76,7 +76,7 @@ const ProductDetails = ({ onAddToCart }) => {
 
       <div className="alldetails">
         <img
-          src={process.env.PUBLIC_URL + "/" + product.image}
+          src={product.image}
           alt={product.name}
           style={{ width: "200px", height: "200px", borderRadius: "7px" }}
         />
@@ -84,9 +84,8 @@ const ProductDetails = ({ onAddToCart }) => {
           <h2>{product.name}</h2>
           <p>Price: Rs. {product.price}/-</p>
           <p>Size : {product.size} </p>
-          <p>Box: {product.box}</p>
           <p>Description: {product.description}</p>
-          <p>Category: {product.catagory}</p>
+         
         </div>
         <button className="addtocart" onClick={() => handleAddToCart(product)}>
           Add to Cart

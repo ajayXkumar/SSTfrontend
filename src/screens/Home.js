@@ -142,7 +142,7 @@ const Home = () => {
                   alt={product.name}
                 />
 
-                <div className="details">
+                <div className="details-home">
                   <p>{product.name}</p>
                   <p style={{ fontWeight: "bold" }}>
                     <span style={{ fontSize: "small" }}>Rs.</span>
