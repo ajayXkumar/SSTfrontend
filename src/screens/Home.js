@@ -135,8 +135,7 @@ const Home = () => {
                   style={{
                     width: "30wv",
                     height: "150px",
-                    marginLeft: "20px",
-                    marginTop: "20px",
+                   
                     borderRadius: "7px",
                   }}
                   alt={product.name}
