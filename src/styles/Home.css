@@ -40,10 +40,10 @@
 }
 .introcard {
   width: 100vw;
-  height: 100px;
+  height: 200px;
   margin-top: 10px;
   background-color: #0d0c22;
-  background-image: url("./../../public//shyam.jpg");
+  background-image: url("./../../public//wood.jpg");
   background-size: cover;
   border-radius: 7px;
 
@@ -61,7 +61,7 @@
 .catagory-button {
   height: 40px;
   border-radius: 4px;
-  padding: 16px, 160px;
+  padding: 7px;
   color: #eab54c;
   font-weight: 600;
   border: none;

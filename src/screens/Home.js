@@ -5,9 +5,9 @@ import "../styles/Home.css";
 import { useState } from "react";
 import tilesdata from "../data";
 import { Link } from "react-router-dom";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import { useNavigate } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase.config";
 
@@ -55,7 +55,10 @@ const Home = () => {
   };
 
   return (
-    <div className="home" style={{ padding: "20px", width: "100vw",height:"100vh" }}>
+    <div
+      className="home"
+      style={{ padding: "20px", width: "100vw", height: "100vh" }}
+    >
       <div className="page-title"></div>
       <div className="search-filter">
         <div>
@@ -67,8 +70,16 @@ const Home = () => {
             // onChange={}
           />
         </div>
-        <div onClick={handleClick}>
-          <ShoppingBagIcon />
+        <div onClick={handleClick}></div>
+
+        <div>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={`/admin`}
+            className="product-link"
+          >
+            <AdminPanelSettingsIcon />
+          </Link>
         </div>
       </div>
       <div
@@ -80,28 +91,28 @@ const Home = () => {
           <WindowIcon /> All
         </button>
         <div className="catagory-icons" onClick={handleladoo}>
-          <img
+          {/* <img
             src="./1.jpeg"
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             alt="Description"
-          />
+          /> */}
           ladoo gopal
         </div>
         <div className="catagory-icons" onClick={handlebed}>
-          <img
+          {/* <img
             src="./wash.jpeg"
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             alt="Description"
-          />
+          /> */}
           bed
         </div>
 
         <div className="catagory-icons" onClick={handlephone}>
-          <img
+          {/* <img
             src="./5.jpeg"
             style={{ width: "20px", height: "20px", marginRight: "5px" }}
             alt="Description"
-          />
+          /> */}
           phone stand
         </div>
       </div>
@@ -122,7 +133,7 @@ const Home = () => {
                 <img
                   src={product.image}
                   style={{
-                    width: "140px",
+                    width: "30wv",
                     height: "150px",
                     marginLeft: "20px",
                     marginTop: "20px",
